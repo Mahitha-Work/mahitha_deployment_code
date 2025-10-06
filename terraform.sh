@@ -8,7 +8,7 @@ echo "📦 Installing required dependencies..."
 sudo apt-get install -y wget unzip curl
 
 echo "🌍 Fetching latest Terraform version..."
-LATEST_VERSION=$(curl -s https://api.releases.hashicorp.com/v1/releases/terraform | grep -oP '"version":\s*"\K[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+LATEST_VERSION=1.13.3
 
 echo "⬇️ Downloading Terraform v${LATEST_VERSION}..."
 wget https://releases.hashicorp.com/terraform/${LATEST_VERSION}/terraform_${LATEST_VERSION}_linux_amd64.zip
